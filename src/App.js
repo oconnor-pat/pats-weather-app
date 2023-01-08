@@ -1,4 +1,5 @@
 import "./App.css";
+import ToggleDarkTheme from "./components/themetoggle/themetoggle";
 import Search from "./components/search/search";
 import Forecast from "./components/forecast/forecast";
 import CurrentWeather from "./components/current-weather/current-weather";
@@ -38,6 +39,7 @@ function App() {
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}
+      <ToggleDarkTheme>ToggleDarkTheme</ToggleDarkTheme>
     </div>
   );
 }
