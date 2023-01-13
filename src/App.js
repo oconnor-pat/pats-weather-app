@@ -1,10 +1,10 @@
 import "./App.css";
-import ToggleDarkTheme from "./components/themetoggle/themetoggle";
 import Search from "./components/search/search";
 import Forecast from "./components/forecast/forecast";
 import CurrentWeather from "./components/current-weather/current-weather";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
 import { useState } from "react";
+import DarkMode from "./components/DarkMode/DarkMode";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -39,7 +39,7 @@ function App() {
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}
-      <ToggleDarkTheme>ToggleDarkTheme</ToggleDarkTheme>
+      <DarkMode />
     </div>
   );
 }
